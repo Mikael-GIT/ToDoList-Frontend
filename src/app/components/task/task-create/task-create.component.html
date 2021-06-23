@@ -1,0 +1,22 @@
+<mat-card>
+    <mat-card-title>Nova Tarefa</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Descrição" [(ngModel)]="task.descricao" name="descricao"/>
+        </mat-form-field>
+        <div fxLayout="row wrap">
+            <div fxFlex="50" fxFill fxLayoutAlign="start center">
+                <mat-form-field>
+                    <mat-label>Horário da tarefa</mat-label>
+                    <input matInput type="time" placeholder="" [(ngModel)]="task.hora" name="hora"/>
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+    <button mat-raised-button (click)="createTask()" color="primary">
+        Salvar
+    </button>
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
