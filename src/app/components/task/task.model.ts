@@ -1,6 +1,7 @@
-export interface Task {
-    id?: number
-    descricao: string
-    hora: string
-    concluida: boolean
+export class Task {
+    id?: string;
+    descricao: string = '';
+    hora: string =  '';
+    data: string = '';
+    concluida: boolean = false;
 }

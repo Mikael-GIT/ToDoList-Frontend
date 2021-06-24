@@ -14,6 +14,7 @@ export class TaskCreateComponent implements OnInit {
   task: Task = {
     descricao: '',
     hora: '',
+    data: '',
     concluida: false
   }
 

@@ -1,5 +1,5 @@
 <mat-card>
-    <mat-card-title>Nova Tarefa</mat-card-title>
+    <mat-card-title>Alterar Tarefa</mat-card-title>
     <form>
         <mat-form-field>
             <input matInput placeholder="Descrição" [(ngModel)]="task.descricao" name="descricao"/>
@@ -21,8 +21,8 @@
             </div>
         </div>
     </form>
-    <button mat-raised-button (click)="createTask()" color="primary">
-        Salvar
+    <button mat-raised-button (click)="updateTask()" color="primary">
+        Atualizar
     </button>
     <button mat-raised-button (click)="cancel()">
         Cancelar

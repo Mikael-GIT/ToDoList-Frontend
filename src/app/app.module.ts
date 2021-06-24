@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -22,7 +24,12 @@ import { TasksCrudComponent } from './views/tasks-crud/tasks-crud.component';
 import { TaskCreateComponent } from './components/task/task-create/task-create.component';
 import {MatTableModule} from '@angular/material/table';
 
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { TaskReadComponent } from './components/task/task-read/task-read.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { TaskUpdateComponent } from './components/task/task-update/task-update.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +38,10 @@ import { HttpClientModule } from '@angular/common/http'
     NavComponent,
     HomeComponent,
     TasksCrudComponent,
-    TaskCreateComponent
+    TaskCreateComponent,
+    TaskReadComponent,
+    TaskUpdateComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -48,7 +58,11 @@ import { HttpClientModule } from '@angular/common/http'
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatNativeDateModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
