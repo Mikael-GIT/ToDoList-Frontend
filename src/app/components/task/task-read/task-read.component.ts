@@ -47,4 +47,20 @@ export class TaskReadComponent implements OnInit {
         .subscribe(tasks => this.tasks = tasks)
      });
   }
+
+  orderByData(){
+    this.taskService.readByParameter("orderByData")
+      .subscribe(tasks => {
+        this.tasks = tasks
+        console.log(this.tasks)
+      })
+  }
+
+  orderByDescricao(){
+    this.taskService.readByParameter("orderByDescricao")
+      .subscribe(tasks => {
+        this.tasks = tasks
+        console.log(this.tasks)
+      })
+  }
 }

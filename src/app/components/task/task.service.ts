@@ -10,7 +10,7 @@ import * as moment from 'moment';
 })
 export class TaskService {
 
-  baseUrl = 'http://localhost:3001/tarefas'
+  baseUrl = 'http://localhost:8080/tasks'
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
   showMessage(msg: string): void {
@@ -29,7 +29,11 @@ export class TaskService {
   }
 
   read(): Observable<Task[]> {
-    return this.http.get<Task[]>(this.baseUrl)
+    return this.http.get<Task[]>(`${this.baseUrl}`);
+  }
+
+  readByParameter(uri?: string): Observable<Task[]> {
+    return this.http.get<Task[]>(`${this.baseUrl}/${uri}`);
   }
 
   findById(id: string): Observable<Task> {
